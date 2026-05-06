@@ -3,7 +3,7 @@ import os
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 
-# Make sure your ultrulytics json file has the right paths (the location of the file is different per distro)
+# Make sure your ultralytics json file has the right paths (the location of the file is different per distro)
 # place YOLO_DATASET (the folder outputted by create_structure.py) in the directory root
 # make sure paths in data.yaml are good
 
