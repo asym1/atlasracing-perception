@@ -33,3 +33,4 @@ MANIFEST
 # YOLO specifics
 YOLO_DATASET
 FS_Cone
+*.csv
