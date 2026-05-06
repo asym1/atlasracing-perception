@@ -1,0 +1,18 @@
+{
+  "format_version": 1,
+  "operations": [
+    {
+      "op_name": "wa/model.10/m/m.0/attn/Transpose",
+      "param_target": "attributes",
+      "param_name": "perm",
+      "values": [
+        0,
+        1,
+        2,
+        3
+      ]
+    }
+  ],
+  "_comment": "Auto-generated replacement for best",
+  "_generation_reason": "conversion_error"
+}

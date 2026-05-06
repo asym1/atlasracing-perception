@@ -1,0 +1,25 @@
+
+Benchmarks complete for /home/amr/Dev/atlasracing/training/yolo26m_640/weights/best.pt on YOLO_DATASET/data.yaml at imgsz=640 (256.79s)
+Benchmarks legend:  - ✅ Success  - ❎ Export passed but validation failed  - ❌️ Export failed
++-----------------------------------------------------------------------------------------------------------+
+|      Format                  Status❔   Size (MB)   metrics/mAP50-95(B)   Inference time (ms/im)   FPS    |
++===========================================================================================================+
+| 1    PyTorch                 ✅         42.0        0.5222                3.75                     266.65 |
+| 2    TorchScript             ✅         78.3        0.5212                4.48                     223.34 |
+| 3    ONNX                    ✅         77.9        0.5212                7.28                     137.35 |
+| 4    OpenVINO                ❌         0.0         -                     -                        -      |
+| 5    TensorRT                ✅         80.8        0.5212                3.15                     317.64 |
+| 6    CoreML                  ❌         0.0         -                     -                        -      |
+| 7    TensorFlow SavedModel   ❌         0.0         -                     -                        -      |
+| 8    TensorFlow GraphDef     ❌         0.0         -                     -                        -      |
+| 9    TensorFlow Lite         ❌         0.0         -                     -                        -      |
+| 10   TensorFlow Edge TPU     ❌         0.0         -                     -                        -      |
+| 11   TensorFlow.js           ❌         0.0         -                     -                        -      |
+| 12   PaddlePaddle            ❌         0.0         -                     -                        -      |
+| 13   MNN                     ✅         77.8        0.5212                64.69                    15.46  |
+| 14   NCNN                    ✅         77.8        0.5283                61.69                    16.21  |
+| 15   IMX                     ❌         0.0         -                     -                        -      |
+| 16   RKNN                    ❌         0.0         -                     -                        -      |
+| 17   ExecuTorch              ❌         0.0         -                     -                        -      |
+| 18   Axelera                 ❌         0.0         -                     -                        -      |
++-----------------------------------------------------------------------------------------------------------+

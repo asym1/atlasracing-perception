@@ -1,0 +1,23 @@
+description: Ultralytics YOLO11m model trained on YOLO_DATASET/data.yaml
+author: Ultralytics
+date: '2026-04-28T16:31:51.689156'
+version: 8.4.13
+license: AGPL-3.0 License (https://ultralytics.com/license)
+docs: https://docs.ultralytics.com
+stride: 32
+task: detect
+batch: 1
+imgsz:
+- 640
+- 640
+names:
+  0: unknown_cone
+  1: yellow_cone
+  2: blue_cone
+  3: orange_cone
+  4: large_orange_cone
+args:
+  batch: 1
+  half: false
+channels: 3
+end2end: false
