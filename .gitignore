@@ -34,3 +34,7 @@ MANIFEST
 YOLO_DATASET
 FS_Cone
 *.csv
+*.mnn
+*.onnx
+*.ncnn
+*.ncnn.*
