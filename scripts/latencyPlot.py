@@ -14,16 +14,17 @@ COLORS = {
     "YOLOv11m-640":  "#F4722B",
     "YOLOv26n-640":  "#2DC653",
     "YOLOv26s-640":  "#B5A100",
-    "YOLOv26m-640":  "#9B2FC9",
     "YOLOv26n-1280": "#74B3CE",
     "YOLOv26s-1280": "#1A6FA8",
-    "YOLOv26m-1280": "#0B3D6B",
 }
 
-df = pd.read_csv(CSV)
+EXCLUDE = {"YOLOv26m-1280"}
 
-# Extra right margin to fit external legend
-fig, ax = plt.subplots(figsize=(10, 5))
+df = pd.read_csv(CSV)
+df = df[~df["model"].isin(EXCLUDE)]
+df = df[df["frame_id"] < 500]
+
+fig, ax = plt.subplots(figsize=(10, 8))
 fig.patch.set_facecolor("white")
 ax.set_facecolor("white")
 
@@ -40,7 +41,7 @@ for model_label, group in df.groupby("model", sort=False):
 ax.set_xlabel("Frames", fontsize=12, color="#222222", labelpad=8)
 ax.set_ylabel("Latency (ms / frame)", fontsize=12, color="#222222", labelpad=8)
 ax.set_title(
-    "TensorRT End-to-end Inference Latency — 1 000 Frames",
+    "TensorRT End-to-end Inference Latency — 500 Frames",
     fontsize=13, fontweight="bold", color="#111111", pad=12
 )
 ax.tick_params(colors="#444444", labelsize=10)
@@ -49,10 +50,9 @@ for spine in ax.spines.values():
 ax.yaxis.set_minor_locator(ticker.AutoMinorLocator())
 ax.grid(which="major", color="#eeeeee", linewidth=0.8)
 ax.grid(which="minor", color="#f5f5f5", linewidth=0.4)
-ax.set_xlim(0, 999)
-
-# Clip y-axis at 12.5 — hides YOLOv26m-1280 upper spikes, zooms into lower models
-ax.set_ylim(bottom=0, top=12.5)
+ax.set_xlim(0, 499)
+ax.set_ylim(bottom=1, top=7)
+ax.yaxis.set_major_locator(ticker.MultipleLocator(0.5))
 
 handles, labels = ax.get_legend_handles_labels()
 
@@ -63,7 +63,6 @@ for h, l in zip(handles, labels):
     else:
         h640.append(h); l640.append(l)
 
-# Both legends stacked on the right, outside the axes
 leg640 = ax.legend(
     h640, l640, title="640 Resolution",
     loc="upper left", bbox_to_anchor=(1.02, 1.0),
@@ -79,6 +78,5 @@ leg1280 = ax.legend(
     framealpha=0.93, edgecolor="#cccccc", frameon=True
 )
 
-# bbox_inches="tight" ensures the external legend is not clipped
 plt.savefig(OUT, dpi=180, bbox_inches="tight", facecolor="white")
 print(f"Saved: {OUT}")

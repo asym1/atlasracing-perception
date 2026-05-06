@@ -24,7 +24,7 @@ MODELS = [
 ]
 
 N_WARMUP = 20
-N_FRAMES = 1000
+N_FRAMES = 500
 
 results = []  # (model_label, frame_id, latency_ms)
 
