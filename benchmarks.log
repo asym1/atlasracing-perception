@@ -1,0 +1,71 @@
+Benchmarks complete for /home/amr/Dev/atlasracing-perception/yolo_models/YOLOv11_640x640/yolo11n_640/weights/best.pt on /home/amr/Dev/atlasracing-perception/YOLO_DATASET/data.yaml at imgsz=640 (15.79s)
+Benchmarks legend:  - ✅ Success  - ❎ Export passed but validation failed  - ❌️ Export failed
++----------------------------------------------------------------------------------------------+
+|     Format     Status❔   Size (MB)   metrics/mAP50-95(B)   Inference time (ms/im)   FPS     |
++==============================================================================================+
+| 1   TensorRT   ✅         12.6        0.4187                0.84                     1194.89 |
++----------------------------------------------------------------------------------------------+
+
+Benchmarks complete for /home/amr/Dev/atlasracing-perception/yolo_models/YOLOv11_640x640/yolo11s_640/weights/best.pt on /home/amr/Dev/atlasracing-perception/YOLO_DATASET/data.yaml at imgsz=640 (14.33s)
+Benchmarks legend:  - ✅ Success  - ❎ Export passed but validation failed  - ❌️ Export failed
++--------------------------------------------------------------------------------------------+
+|     Format     Status❔   Size (MB)   metrics/mAP50-95(B)   Inference time (ms/im)   FPS   |
++============================================================================================+
+| 1   TensorRT   ✅         38.7        0.4546                1.58                     633.3 |
++--------------------------------------------------------------------------------------------+
+
+Benchmarks complete for /home/amr/Dev/atlasracing-perception/yolo_models/YOLOv11_640x640/yolo11m_640/weights/best.pt on /home/amr/Dev/atlasracing-perception/YOLO_DATASET/data.yaml at imgsz=640 (17.50s)
+Benchmarks legend:  - ✅ Success  - ❎ Export passed but validation failed  - ❌️ Export failed
++--------------------------------------------------------------------------------------------+
+|     Format     Status❔   Size (MB)   metrics/mAP50-95(B)   Inference time (ms/im)   FPS   |
++============================================================================================+
+| 1   TensorRT   ✅         79.4        0.4712                3.23                     309.6 |
++--------------------------------------------------------------------------------------------+
+
+Benchmarks complete for /home/amr/Dev/atlasracing-perception/yolo_models/YOLOv26_640x640/yolo26n_640/weights/best.pt on /home/amr/Dev/atlasracing-perception/YOLO_DATASET/data.yaml at imgsz=640 (13.87s)
+Benchmarks legend:  - ✅ Success  - ❎ Export passed but validation failed  - ❌️ Export failed
++---------------------------------------------------------------------------------------------+
+|     Format     Status❔   Size (MB)   metrics/mAP50-95(B)   Inference time (ms/im)   FPS    |
++=============================================================================================+
+| 1   TensorRT   ✅         12.0        0.5072                0.95                     1048.2 |
++---------------------------------------------------------------------------------------------+
+
+Benchmarks complete for /home/amr/Dev/atlasracing-perception/yolo_models/YOLOv26_640x640/yolo26s_640/weights/best.pt on /home/amr/Dev/atlasracing-perception/YOLO_DATASET/data.yaml at imgsz=640 (14.92s)
+Benchmarks legend:  - ✅ Success  - ❎ Export passed but validation failed  - ❌️ Export failed
++---------------------------------------------------------------------------------------------+
+|     Format     Status❔   Size (MB)   metrics/mAP50-95(B)   Inference time (ms/im)   FPS    |
++=============================================================================================+
+| 1   TensorRT   ✅         39.1        0.5062                1.85                     540.16 |
++---------------------------------------------------------------------------------------------+
+
+Benchmarks complete for /home/amr/Dev/atlasracing-perception/yolo_models/YOLOv26_640x640/yolo26m_640/weights/best.pt on /home/amr/Dev/atlasracing-perception/YOLO_DATASET/data.yaml at imgsz=640 (17.27s)
+Benchmarks legend:  - ✅ Success  - ❎ Export passed but validation failed  - ❌️ Export failed
++--------------------------------------------------------------------------------------------+
+|     Format     Status❔   Size (MB)   metrics/mAP50-95(B)   Inference time (ms/im)   FPS   |
++============================================================================================+
+| 1   TensorRT   ✅         80.8        0.5213                3.31                     302.4 |
++--------------------------------------------------------------------------------------------+
+
+Benchmarks complete for /home/amr/Dev/atlasracing-perception/yolo_models/YOLOv26_1280x1280/yolo26n_1280/weights/best.pt on /home/amr/Dev/atlasracing-perception/YOLO_DATASET/data.yaml at imgsz=1280 (15.85s)
+Benchmarks legend:  - ✅ Success  - ❎ Export passed but validation failed  - ❌️ Export failed
++---------------------------------------------------------------------------------------------+
+|     Format     Status❔   Size (MB)   metrics/mAP50-95(B)   Inference time (ms/im)   FPS    |
++=============================================================================================+
+| 1   TensorRT   ✅         17.0        0.5367                1.92                     519.86 |
++---------------------------------------------------------------------------------------------+
+
+Benchmarks complete for /home/amr/Dev/atlasracing-perception/yolo_models/YOLOv26_1280x1280/yolo26s_1280/weights/best.pt on /home/amr/Dev/atlasracing-perception/YOLO_DATASET/data.yaml at imgsz=1280 (19.61s)
+Benchmarks legend:  - ✅ Success  - ❎ Export passed but validation failed  - ❌️ Export failed
++---------------------------------------------------------------------------------------------+
+|     Format     Status❔   Size (MB)   metrics/mAP50-95(B)   Inference time (ms/im)   FPS    |
++=============================================================================================+
+| 1   TensorRT   ✅         37.9        0.5701                4.34                     230.17 |
++---------------------------------------------------------------------------------------------+
+
+Benchmarks complete for /home/amr/Dev/atlasracing-perception/yolo_models/YOLOv26_1280x1280/yolo26m_1280/weights/best.pt on /home/amr/Dev/atlasracing-perception/YOLO_DATASET/data.yaml at imgsz=1280 (29.69s)
+Benchmarks legend:  - ✅ Success  - ❎ Export passed but validation failed  - ❌️ Export failed
++---------------------------------------------------------------------------------------------+
+|     Format     Status❔   Size (MB)   metrics/mAP50-95(B)   Inference time (ms/im)   FPS    |
++=============================================================================================+
+| 1   TensorRT   ✅         79.7        0.5888                9.6                      104.16 |
++---------------------------------------------------------------------------------------------+

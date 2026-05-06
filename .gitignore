@@ -38,3 +38,4 @@ FS_Cone
 *.onnx
 *.ncnn
 *.ncnn.*
+*.engine
