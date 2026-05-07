@@ -1,16 +1,14 @@
 from ultralytics import YOLO
 import os
+from pathlib import Path
 
-SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-
-# Make sure your ultralytics json file has the right paths (the location of the file is different per distro)
-# place YOLO_DATASET (the folder outputted by create_structure.py) in the directory root
-# make sure paths in data.yaml are good
+SCRIPT_DIR = Path(__file__).parent
+REPO_DIR = SCRIPT_DIR.parent
 
 model = YOLO("yolo26s.pt")  # load a pretrained model (recommended for training)
 
 results = model.train(
-  data="YOLO_DATASET/data.yaml",
+  data=str(REPO_DIR / "FS_Cone" / "yolo_dataset" / "data.yaml"),
   epochs=600,
   imgsz=1280, # or 640
   rect=True,
@@ -21,7 +19,7 @@ results = model.train(
   exist_ok=True,
   profile=True, # For tensorRT & ONNX
 
-  project=os.path.join(SCRIPT_DIR, 'training'),
+  project=str(SCRIPT_DIR / 'training'),
   name='yolo11m_1280',
   device=0
 )

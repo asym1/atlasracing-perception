@@ -1,8 +1,10 @@
 from ultralytics.utils.benchmarks import benchmark
 from ultralytics import YOLO
+from pathlib import Path
 
-DATA = "/home/amr/Dev/atlasracing-perception/YOLO_DATASET/data.yaml"
-BASE = "/home/amr/Dev/atlasracing-perception/yolo_models"
+REPO_DIR = Path(__file__).parent.parent
+DATA = str(REPO_DIR / "FS_Cone" / "yolo_dataset" / "data.yaml")
+BASE = str(REPO_DIR / "yolo_models")
 BENCHMARK_MODELS = [
     (f"{BASE}/YOLOv11_640x640/yolo11n_640/weights/best.pt",    640),
     (f"{BASE}/YOLOv11_640x640/yolo11s_640/weights/best.pt",    640),

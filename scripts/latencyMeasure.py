@@ -7,8 +7,10 @@ import time
 import csv
 import numpy as np
 from ultralytics import YOLO
+from pathlib import Path
 
-BASE = "/home/amr/Dev/atlasracing-perception/yolo_models"
+REPO_DIR = Path(__file__).parent.parent
+BASE = str(REPO_DIR / "yolo_models")
 
 MODELS = [
     # (label,                                                         path,                                                                    imgsz)
@@ -61,7 +63,7 @@ for label, path, imgsz in MODELS:
     del model
 
 # Save to CSV
-out_path = "/home/amr/Dev/atlasracing-perception/latency_results.csv"
+out_path = str(REPO_DIR / "latency_results.csv")
 with open(out_path, "w", newline="") as f:
     writer = csv.writer(f)
     writer.writerow(["model", "frame_id", "latency_ms"])

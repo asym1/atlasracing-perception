@@ -2,9 +2,11 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib.ticker as ticker
 import numpy as np
+from pathlib import Path
 
-CSV = "/home/amr/Dev/atlasracing-perception/latency_results.csv"
-OUT = "/home/amr/Dev/atlasracing-perception/latency_plot.png"
+REPO_DIR = Path(__file__).parent.parent
+CSV = str(REPO_DIR / "latency_results.csv")
+OUT = str(REPO_DIR / "latency_plot.png")
 
 ROLLING_WINDOW = 30
 

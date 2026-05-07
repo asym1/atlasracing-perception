@@ -28,6 +28,7 @@ MANIFEST
 
 # Environments
 .venv
+venv
 
 
 # YOLO specifics
@@ -39,3 +40,9 @@ FS_Cone
 *.ncnn
 *.ncnn.*
 *.engine
+
+# VSC
+.vscode/
+
+# Local PT files
+*.pt
